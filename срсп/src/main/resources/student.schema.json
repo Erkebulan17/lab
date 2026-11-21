@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Student",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "email", "age"],
+  "properties": {
+    "id": {"type": "integer", "minimum": 1},
+    "name": {"type": "string", "minLength": 1, "maxLength": 100},
+    "email": {"type": "string", "format": "email"},
+    "age": {"type": "integer", "minimum": 1, "maximum": 120}
+  }
+}
